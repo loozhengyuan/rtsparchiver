@@ -36,30 +36,30 @@ class RSTPServer:
 
         # Set width for video stream
         if self.width:
-            command.extend(["-w", self.width,])
+            command.extend(["-w", self.width])
 
         # Set height for video stream
         if self.height:
-            command.extend(["-h", self.height,])
+            command.extend(["-h", self.height])
 
         # Set fps for video stream
         if self.fps:
-            command.extend(["-f", self.fps,])
+            command.extend(["-f", self.fps])
 
         # Set file prefix
         if self.prefix:
-            command.extend(["-F", self.prefix,])
+            command.extend(["-F", self.prefix])
 
         # Set data chunk in seconds
         if self.chunk:
-            command.extend(["-P", self.chunk,])
-        
+            command.extend(["-P", self.chunk])
+
         # Add credentials
-        command.extend(["-u", self.username, self.password,])
+        command.extend(["-u", self.username, self.password])
 
         # Add uri
         command.extend([uri])
-        
+
         return command
 
 
